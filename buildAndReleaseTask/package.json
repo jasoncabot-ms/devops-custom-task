@@ -16,6 +16,7 @@
     "@types/mocha": "^5.2.7",
     "@types/node": "^12.11.7",
     "@types/q": "^1.5.2",
-    "sync-request": "^6.1.0"
+    "sync-request": "^6.1.0",
+    "tfx-cli": "^0.7.9"
   }
 }

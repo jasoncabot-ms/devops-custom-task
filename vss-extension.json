@@ -3,7 +3,7 @@
     "id": "devops-custom-task",
     "name": "DevOps Custom Task",
     "version": "1.0.0",
-    "publisher": "Jason Cabot",
+    "publisher": "JasonCabot",
     "targets": [
         {
             "id": "Microsoft.VisualStudio.Services"

@@ -1,4 +1,4 @@
-name: CI
+name: Build Extension
 
 on:
   push:
@@ -12,5 +12,15 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Create extension
-      run: ./package.sh
+    - uses: actions/setup-node@v1
+      with:
+        node-version: '10.x'
+    - name: Package extension
+      run: |
+        chmod +x package.sh
+        ./package.sh
+
+    - uses: actions/upload-artifact@master
+      with:
+        name: extension
+        path: dist
