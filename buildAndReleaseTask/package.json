@@ -4,7 +4,8 @@
   "description": "A sample custom task for Azure DevOps pipelines",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc -p .",
+    "test": "tsc -p . && mocha tests/_suite.js"
   },
   "author": "Jason Cabot",
   "license": "ISC",
@@ -12,7 +13,9 @@
     "azure-pipelines-task-lib": "^2.9.3"
   },
   "devDependencies": {
+    "@types/mocha": "^5.2.7",
     "@types/node": "^12.11.7",
-    "@types/q": "^1.5.2"
+    "@types/q": "^1.5.2",
+    "sync-request": "^6.1.0"
   }
 }

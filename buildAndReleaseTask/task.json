@@ -1,0 +1,31 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Microsoft/azure-pipelines-task-lib/master/tasks.schema.json",
+    "id": "f3a5a4ba-8852-46f8-a4e9-f64d7ae2ba9c",
+    "name": "devops-custom-task",
+    "friendlyName": "DevOps Custom Task",
+    "description": "A sample custom task for Azure DevOps pipelines",
+    "helpMarkDown": "",
+    "category": "Utility",
+    "author": "Jason Cabot",
+    "version": {
+        "Major": 1,
+        "Minor": 0,
+        "Patch": 0
+    },
+    "instanceNameFormat": "Echo $(samplestring)",
+    "inputs": [
+        {
+            "name": "samplestring",
+            "type": "string",
+            "label": "Sample String",
+            "defaultValue": "",
+            "required": true,
+            "helpMarkDown": "A sample string"
+        }
+    ],
+    "execution": {
+        "Node10": {
+            "target": "index.js"
+        }
+    }
+}
